@@ -106,5 +106,5 @@ We are wanting to encourage community devs to create a Ravencoin core wallet spe
 
 The more people we can encourage to run both Ravencoin Core AND IPFS nodes (or the extended RVN node with IPFS intergration when, indeed IF, it becomes available) the better the resiliency, interconnectedness and decentralisation of the Ravencoin network as a whole, including asset data.
 
-The extended node operator should be able to control the size of the IPFS data kept by their node individually and as a total. Initially to strengthen the overall network we should be focused on smaller IPFS messages specifically to enable P2P marketplaces in future, but this shuld be operator set to allow easy propogation of Ravencoin related content accross nodes.
+The extended node operator should be able to control the size of the IPFS data kept by their node individually and as a total. Initially to strengthen the overall network we should be focused on smaller IPFS messages specifically to enable P2P marketplaces in future, but this should be operator set to allow easy propogation of Ravencoin related content accross nodes.
 
