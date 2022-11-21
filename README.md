@@ -14,7 +14,7 @@ Assets can be used for NFTs, STOs, Gift Cards, and fractional ownership of anyth
 Ravencoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried
 out collectively by the network. 
 
-Ravencoin Extended Core leverages the Ravencoin Core wallet code and is intended to add IPFS node capabilities as well as other experimental updates to improve functionality for Ravencoin users. We support Ravencoin and as whatever we build is opensourced, anything we build can be incorporated into the Raven Core wallet but we do not expect everything to be added as changes are risky and in our opinion only minimal changes should be made to the existing Ravencoin Core wallet code to maintain it's security for the Ravencoin Community as the referance implementation. 
+Ravencoin Extended Core leverages the Ravencoin Core wallet code and is intended to add IPFS node capabilities as well as other experimental updates to improve functionality for Ravencoin users. We support Ravencoin and as whatever we build is opensourced, anything we build can be incorporated into the Raven Core wallet. We do not expect everything to be added as changes are risky and in our opinion only minimal changes should be made to the existing Ravencoin Core wallet code to maintain it's security for the Ravencoin Community as the referance implementation. 
 
 License
 -------
