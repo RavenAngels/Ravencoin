@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - master
-      - develop
+      - xcore-develop
       - release*
 #    paths-ignore:
 #      - 'binaries/**'
