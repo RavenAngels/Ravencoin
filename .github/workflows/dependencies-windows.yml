@@ -32,7 +32,7 @@ jobs:
     - name: Build the Dependencies
       run: |
           cd ${{ GITHUB.WORKSPACE }}/depends
-          make HOST=x86_64-w64-mingw32 -j2
+          make HOST=x86_64-w64-mingw32 -j4
 
     - name: Tar Up the Dependencies
       run: |
