@@ -19,7 +19,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout the Code
@@ -29,7 +29,7 @@ jobs:
       run: sudo ${SCRIPTS}/00-install-deps.sh ${OS}
 
     - name: Build the Dependencies
-      run: cd depends && make HOST=x86_64-linux-gnu -j2
+      run: cd depends && make HOST=x86_64-linux-gnu -j4
 
     - name: Tar Up the Dependencies
       run: |
@@ -37,15 +37,3 @@ jobs:
         cd ${{ GITHUB.WORKSPACE }}/depends && tar zcf ${{ GITHUB.WORKSPACE }}/depends_temp/raven-linux-dependencies.tar.gz .
         cd ${{ GITHUB.WORKSPACE }}/depends_temp
         if [[ -e raven-linux-dependencies.tar.gz ]]; then sha256sum raven-linux-dependencies.tar.gz > SHASUM; else echo "no dependency tar file found"; fi
-
-    - name: Sync the Dependencies to S3
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks
-      env:
-        SOURCE_DIR: "${{ GITHUB.WORKSPACE }}/depends_temp/"
-        DEST_DIR: 'linux'
-        AWS_REGION: 'us-east-1'
-        AWS_S3_BUCKET: "raven-build-resources"
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
