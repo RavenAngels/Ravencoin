@@ -8,6 +8,7 @@ on:
     branches:
       - master
       - develop
+      - xcore-develop
       - release*
 #    paths-ignore:
 #      - 'binaries/**'
@@ -25,8 +26,8 @@ env:
 
 jobs:
   check-jobs:
-      # continue-on-error: true # Uncomment once integration is finished
-    runs-on: ubuntu-18.04
+       continue-on-error: true # Uncomment once integration is finished
+    runs-on: self-hosted
     # Map a step output to a job output
     outputs:
       should_skip: ${{ steps.skip_check.outputs.should_skip }}
